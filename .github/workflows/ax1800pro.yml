@@ -6,10 +6,10 @@ on:
     - cron: 0 19 * * *
 
 env:
-  REPO_URL: https://github.com/umifly/openwrt-6.x.git
+  REPO_URL: https://github.com/LiBwrt/openwrt-6.x
   REPO_BRANCH: main-nss
   CONFIG_FILE: configs/ax1800pro.config
-  DIY_SCRIPT: libwrt.sh
+  DIY_SCRIPT: custom.sh
   CLASH_KERNEL: amd64
   CACHE_TOOLCHAIN: true
   UPLOAD_BIN_DIR: false
