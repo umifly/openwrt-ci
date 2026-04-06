@@ -1,4 +1,4 @@
-name: IPQ60XX-6.12-WIFI
+name: AX1800Pro-build
 
 on:
   workflow_dispatch:
