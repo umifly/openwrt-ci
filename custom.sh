@@ -32,8 +32,7 @@ function git_sparse_clone() {
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 # iStore
-git_sparse_clone main https://github.com/linkease/istore-ui app-store-ui
-git_sparse_clone main https://github.com/linkease/istore luci
+git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-quickstart
 
 # 在线用户
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
