@@ -33,6 +33,7 @@ git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mo
 
 # iStore
 git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-quickstart
+git_sparse_clone main https://github.com/kiddin9/op-packages quickstart
 
 # 在线用户
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
