@@ -3,7 +3,7 @@ name: AX1800Pro-build
 on:
   workflow_dispatch:
   schedule:
-    - cron: 0 19 * * *
+    - cron: 0 15 * * 5
 
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x
