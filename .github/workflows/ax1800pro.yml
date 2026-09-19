@@ -7,7 +7,7 @@ on:
 
 env:
   REPO_URL: https://github.com/LiBwrt/openwrt-6.x
-  REPO_BRANCH: main-nss
+  REPO_BRANCH: 25.12-nss
   CONFIG_FILE: configs/ax1800pro.config
   DIY_SCRIPT: custom.sh
   CLASH_KERNEL: amd64
