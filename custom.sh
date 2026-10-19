@@ -35,6 +35,9 @@ git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mo
 git_sparse_clone main https://github.com/kiddin9/op-packages luci-app-quickstart
 git_sparse_clone main https://github.com/kiddin9/op-packages quickstart
 
+#easyMesh
+git clone --depth=1 https://github.com/arafatrahmanzami/luci-app-easymesh package/luci-app-easymesh
+
 # 在线用户
 git_sparse_clone main https://github.com/haiibo/packages luci-app-onliner
 sed -i '$i uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
