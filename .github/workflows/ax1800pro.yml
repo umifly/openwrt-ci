@@ -167,7 +167,7 @@ jobs:
         body: |
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息(WIFI)
-          - 为JDC_AX1800Pro设计的带WIFI带有线NSS的6.12内核固件
+          - 为JDC_AX1800Pro设计的带WIFI带有线NSS11.4.0.5的6.12内核固件
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
