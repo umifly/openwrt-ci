@@ -15,6 +15,9 @@ git_sparse_clone main https://github.com/kiddin9/op-packages quickstart
 #mosdns
 git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
+#easymesh
+git clone --depth=1 https://github.com/arafatrahmanzami/luci-app-easymesh package/luci-app-easymesh
+
 # 修改版本为编译日期
 date_version=$(date +"%y.%m.%d")
 orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | grep DISTRIB_REVISION= | awk -F "'" '{print $2}')
