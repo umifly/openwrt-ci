@@ -28,7 +28,7 @@ orig_version=$(cat "package/lean/default-settings/files/zzz-default-settings" | 
 sed -i "s/${orig_version}/R${date_version} by umifly/g" package/lean/default-settings/files/zzz-default-settings
 
 # 修复 batman-adv 2026.x 与 Linux 5.10 内核不兼容问题（锁定 routing 源为 openwrt-23.05 分支）
-sed -i 's|^src-git routing .*|src-git routing https://github.com/openwrt/routing.git;openwrt-23.05|' feeds.conf.default
+sed -i 's|^src-git routing .*|src-git routing https://github.com/openwrt/routing.git;openwrt-22.03|' feeds.conf.default
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
