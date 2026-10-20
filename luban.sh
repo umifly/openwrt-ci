@@ -30,5 +30,13 @@ sed -i "s/${orig_version}/R${date_version} by umifly/g" package/lean/default-set
 # 修复 batman-adv 2026.x 与 Linux 5.10 内核不兼容问题（锁定 routing 源为 openwrt-23.05 分支）
 sed -i 's|^src-git routing .*|src-git routing https://github.com/openwrt/routing.git;openwrt-22.03|' feeds.conf.default
 
+# 2. 修复 shadowsocksr-libev 找不到 OpenSSL 头文件的问题（必须在 feeds update 之后、install 之前或之后执行）
+if [ -f feeds/helloworld/shadowsocksr-libev/Makefile ]; then
+  # 强制在 DEPENDS 中加入 +libopenssl，确保并发编译时先编译安装 openssl
+  sed -i 's/DEPENDS:=/DEPENDS:=+libopenssl /g' feeds/helloworld/shadowsocksr-libev/Makefile
+  # 显式传入 staging_dir 下的 openssl 路径，防止 pcre2-config 污染头文件路径
+  sed -i '/CONFIGURE_ARGS +=/a \	--with-openssl="$(STAGING_DIR)/usr" \\' feeds/helloworld/shadowsocksr-libev/Makefile
+fi
+
 ./scripts/feeds update -a
 ./scripts/feeds install -a
