@@ -119,7 +119,9 @@ jobs:
       run: |
         cd $OPENWRT_PATH
         echo -e "$(nproc) thread compile"
-        make package/libs/openssl/compile -j$(nproc) V=s
+        make tools/install -j$(nproc)
+        make toolchain/install -j$(nproc)
+        make package/libs/openssl/compile -j$(nproc)
         make -j$(nproc) || make -j1 V=s
         echo "status=success" >> $GITHUB_OUTPUT
         echo "DATE=$(date +"%Y-%m-%d %H:%M:%S")" >> $GITHUB_ENV
