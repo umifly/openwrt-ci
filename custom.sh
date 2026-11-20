@@ -85,3 +85,6 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+
+#去掉quickstart PKG_VERSION 中多余的 -r 后缀
+sed -i '/^PKG_VERSION:=/s/-r[0-9]\+//g' package/luci-app-quickstart/Makefile
